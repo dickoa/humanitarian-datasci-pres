@@ -184,13 +184,13 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.98994949"
-     inkscape:cx="490.25625"
+     inkscape:cx="298.32727"
      inkscape:cy="790.6614"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1920"
-     inkscape:window-height="1019"
+     inkscape:window-height="1024"
      inkscape:window-x="0"
      inkscape:window-y="32"
      inkscape:window-maximized="1" />
@@ -287,7 +287,7 @@
        inkscape:export-xdpi="141.25674"
        inkscape:export-ydpi="141.25674" />
     <path
-       style="fill:url(#linearGradient1171);fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.652;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow1Mstart)"
+       style="fill:url(#linearGradient1171);fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.65200001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow1Mstart)"
        d="M 39.616091,58.109417 25.344193,65.378354"
        id="path1097"
        inkscape:connector-type="polyline"
@@ -366,16 +366,16 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:4.57606649px;line-height:2.86004162px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.11440166"
-       x="133.25386"
+       x="134.32294"
        y="121.32044"
        id="text1153"
        inkscape:export-xdpi="141.25674"
        inkscape:export-ydpi="141.25674"><tspan
          sodipodi:role="line"
          id="tspan1151"
-         x="133.25386"
+         x="134.32294"
          y="121.32044"
-         style="stroke-width:0.11440166">Cartes</tspan></text>
+         style="stroke-width:0.11440166">Maps</tspan></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.73699999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
        d="m 140.04923,116.34479 v -7.50254"
@@ -387,17 +387,17 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:5.2205224px;line-height:3.26282644px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.13051306"
-       x="-114.20104"
-       y="115.38708"
+       x="-110.46013"
+       y="115.46725"
        id="text1161"
        transform="rotate(-91.227766)"
        inkscape:export-xdpi="141.25674"
        inkscape:export-ydpi="141.25674"><tspan
          sodipodi:role="line"
          id="tspan1159"
-         x="-114.20104"
-         y="115.38708"
-         style="stroke-width:0.13051306">Graphiques</tspan></text>
+         x="-110.46013"
+         y="115.46725"
+         style="stroke-width:0.13051306">Graphics</tspan></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.36500001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:4.38, 4.38;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#marker2185)"
        d="M 56.126602,118.9985 55.85933,96.815123"
@@ -409,16 +409,21 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:5.29340839px;line-height:3.30838013px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.1323352"
-       x="47.087151"
+       x="51.630733"
        y="92.528748"
        id="text2429"
        inkscape:export-xdpi="141.25674"
        inkscape:export-ydpi="141.25674"><tspan
          sodipodi:role="line"
          id="tspan2427"
-         x="47.087151"
+         x="51.630733"
          y="92.528748"
-         style="stroke-width:0.1323352">Jointure</tspan></text>
+         style="stroke-width:0.1323352">Join</tspan><tspan
+         sodipodi:role="line"
+         x="51.630733"
+         y="95.837128"
+         style="stroke-width:0.1323352"
+         id="tspan55" /></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.465;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:5.58, 5.58;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker2115)"
        d="M 81.249934,73.829944 61.20472,83.718915"

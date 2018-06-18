@@ -18,16 +18,25 @@ knitr::opts_chunk$set(warning = FALSE, message = FALSE, fig.width = 12, fig.heig
 
 ---
 class: center, middle, inverse
-## What is humanitarian data science ?
+## Why humanitarian data science ?
 
 ---
-class: center, middle
+## Analysis is often slow and costly (license and staff)
 .center[![R](./images/reproducibleFlow.png)]
+
+---
+## Why humanitarian data science
+- Analysis is often error prone and not reproducible (can give an example)
+
+
+---
+## Why humanitarian data science
+- Humanitarians informations managers come from a wide varied of disciplines and background
+- Most lack knowledge of modern data science tools
 
 ---
 class: center, middle
 .center[![flow](./images/RFlow.png)]
-
 
 ---
 class: center, middle
@@ -42,12 +51,10 @@ class: center, middle
 .center[![typeR](./images/typeR.gif)]
 
 ---
-## What is R ?
+## Why R ?
 
- - `R` est un langage de programmation interpreté
- - `R` est gratuit et open source
- - `R` il existe une grande communauté et 12000 packages (add-ons)
- - `R` excelle dans la manipulation et la visualisation de données
+ - `R` is open source and free
+ - `R` great community and around 12000 packages (add-ons)
 
 
 ---
@@ -114,7 +121,8 @@ data %>%
 
 ```{r}
 data %>%
-  mutate(taille_metre = taille / 100, imc = poids / (taille_metre^2)) %>%
+  mutate(taille_metre = taille / 100,
+         imc = poids / (taille_metre^2)) %>%
   arrange(desc(imc))
 ```
 
@@ -130,14 +138,26 @@ class: center, middle
 
 ---
 class: center, middle, inverse
-## Building an open course
+## Building a Massive Open Online Course
+
+---
+class: center, middle, inverse
+## Demo
+
+---
+## Main activities and timeline
+
+- Develop core [curriculum](https://docs.google.com/document/d/1ztVle5UL7TPJXh9v5amzKxRhEutRf4WqhdnCuaR7kwc/edit#)
+- Organize a 1 week “sprint” session inviting core contributors (HDX, WFP, UNHCR, …) to build the skeleton and muscles of the course - **July 2018**
+- Refine content with support from DataCamp and possibly RStudio and test with large pool of IMO
+- Launch content online by end of 2018 advertise to users but also advertise so that content can be expanded/translated
 
 
 ---
 class: center, middle, inverse
 ## Questions?
 
-[dicko5@un.org](mailto:dicko5@un.org)
+<!-- [dicko5@un.org](mailto:dicko5@un.org) -->
 
-[dickoa.gitlab.io](http://dickoa.gitlab.io)
+<!-- [dickoa.gitlab.io](http://dickoa.gitlab.io) -->
 
