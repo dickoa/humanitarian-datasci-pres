@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Humanitarian Data science</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Bill Olander and Ahmadou Dicko" />
+    <meta name="date" content="2018-06-27" />
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Humanitarian Data science
+## Why reproducible analyse matter
+### Bill Olander and Ahmadou Dicko
+### 27 June 2018
+
+---
+
+
+
+
+---
+class: center, middle, inverse
+## What is humanitarian data science ?
+
+---
+class: center, middle
+.center[![R](./images/reproducibleFlow.png)]
+
+---
+class: center, middle
+.center[![flow](./images/RFlow.png)]
+
+
+---
+class: center, middle
+.center[![flow](./images/datasciFlow.png)]
+
+---
+class: center, middle, inverse
+## Grammar of data manipulation
+
+---
+class: center, middle
+.center[![typeR](./images/typeR.gif)]
+
+---
+## What is R ?
+
+ - `R` est un langage de programmation interpreté
+ - `R` est gratuit et open source
+ - `R` il existe une grande communauté et 12000 packages (add-ons)
+ - `R` excelle dans la manipulation et la visualisation de données
+
+
+---
+## Open an Excel sheet 
+
+
+```r
+library(readxl)
+data &lt;- read_excel(path = "data/data.xlsx", sheet = 1)
+data
+```
+
+```
+## # A tibble: 7 x 4
+##   nom     village taille poids
+##   &lt;chr&gt;   &lt;chr&gt;    &lt;dbl&gt; &lt;dbl&gt;
+## 1 Ali     B          165    50
+## 2 Marie   A          170    55
+## 3 Modou   A          200    90
+## 4 Babacar B          185    80
+## 5 Fatim   B          155    48
+## 6 David   B          175    75
+## 7 Aicha   A          180    70
+```
+
+---
+## Grammar of data manipulation and graphics
+
+
+
+```r
+library(dplyr)
+data %&gt;%
+  filter(village == "B") 
+```
+
+```
+## # A tibble: 4 x 4
+##   nom     village taille poids
+##   &lt;chr&gt;   &lt;chr&gt;    &lt;dbl&gt; &lt;dbl&gt;
+## 1 Ali     B          165    50
+## 2 Babacar B          185    80
+## 3 Fatim   B          155    48
+## 4 David   B          175    75
+```
+
+---
+## Grammar of data manipulation
+
+
+```r
+data %&gt;%
+  filter(village == "B", taille &gt; 170)
+```
+
+```
+## # A tibble: 2 x 4
+##   nom     village taille poids
+##   &lt;chr&gt;   &lt;chr&gt;    &lt;dbl&gt; &lt;dbl&gt;
+## 1 Babacar B          185    80
+## 2 David   B          175    75
+```
+
+---
+## Grammar of data manipulation
+
+
+```r
+data %&gt;%
+  arrange(poids)
+```
+
+```
+## # A tibble: 7 x 4
+##   nom     village taille poids
+##   &lt;chr&gt;   &lt;chr&gt;    &lt;dbl&gt; &lt;dbl&gt;
+## 1 Fatim   B          155    48
+## 2 Ali     B          165    50
+## 3 Marie   A          170    55
+## 4 Aicha   A          180    70
+## 5 David   B          175    75
+## 6 Babacar B          185    80
+## 7 Modou   A          200    90
+```
+
+---
+## Grammar of data manipulation
+
+
+```r
+data %&gt;%
+  arrange(desc(poids))
+```
+
+```
+## # A tibble: 7 x 4
+##   nom     village taille poids
+##   &lt;chr&gt;   &lt;chr&gt;    &lt;dbl&gt; &lt;dbl&gt;
+## 1 Modou   A          200    90
+## 2 Babacar B          185    80
+## 3 David   B          175    75
+## 4 Aicha   A          180    70
+## 5 Marie   A          170    55
+## 6 Ali     B          165    50
+## 7 Fatim   B          155    48
+```
+
+---
+## Grammar of data manipulation
+
+
+```r
+data %&gt;%
+  select(nom, taille)
+```
+
+```
+## # A tibble: 7 x 2
+##   nom     taille
+##   &lt;chr&gt;    &lt;dbl&gt;
+## 1 Ali        165
+## 2 Marie      170
+## 3 Modou      200
+## 4 Babacar    185
+## 5 Fatim      155
+## 6 David      175
+## 7 Aicha      180
+```
+---
+## Grammar of data manipulation
+
+
+```r
+data %&gt;%
+  select(nom, taille) %&gt;%
+  arrange(desc(taille))
+```
+
+```
+## # A tibble: 7 x 2
+##   nom     taille
+##   &lt;chr&gt;    &lt;dbl&gt;
+## 1 Modou      200
+## 2 Babacar    185
+## 3 Aicha      180
+## 4 David      175
+## 5 Marie      170
+## 6 Ali        165
+## 7 Fatim      155
+```
+
+---
+## Grammar of data manipulation
+
+
+```r
+data %&gt;%
+  mutate(taille_metre = taille / 100, imc = poids / (taille_metre^2)) %&gt;%
+  arrange(desc(imc))
+```
+
+```
+## # A tibble: 7 x 6
+##   nom     village taille poids taille_metre   imc
+##   &lt;chr&gt;   &lt;chr&gt;    &lt;dbl&gt; &lt;dbl&gt;        &lt;dbl&gt; &lt;dbl&gt;
+## 1 David   B          175    75         1.75  24.5
+## 2 Babacar B          185    80         1.85  23.4
+## 3 Modou   A          200    90         2     22.5
+## 4 Aicha   A          180    70         1.8   21.6
+## 5 Fatim   B          155    48         1.55  20.0
+## 6 Marie   A          170    55         1.7   19.0
+## 7 Ali     B          165    50         1.65  18.4
+```
+
+---
+## Grammaire of graphics
+- Grammaire similaire pour faire des graphiques `ggplot2`
+- Manipulation des données spatiales `sf`
+- D'autres aspects (enquêtes complexes, modélisation, etc)
+
+---
+class: center, middle
+.center[![typeR](./images/twitteR.png)]
+
+---
+class: center, middle, inverse
+## Building an open course
+
+
+---
+class: center, middle, inverse
+## Questions?
+
+[dicko5@un.org](mailto:dicko5@un.org)
+
+[dickoa.gitlab.io](http://dickoa.gitlab.io)
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+});
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

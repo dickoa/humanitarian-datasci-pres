@@ -1,0 +1,143 @@
+---
+title: "Humanitarian Data science"
+subtitle: "Why reproducible analyse matter"
+author: "Bill Olander and Ahmadou Dicko"
+date: "27 June 2018"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r message=FALSE, warning = FALSE, echo = FALSE}
+knitr::opts_chunk$set(warning = FALSE, message = FALSE, fig.width = 12, fig.height = 4)
+```
+
+---
+class: center, middle, inverse
+## What is humanitarian data science ?
+
+---
+class: center, middle
+.center[![R](./images/reproducibleFlow.png)]
+
+---
+class: center, middle
+.center[![flow](./images/RFlow.png)]
+
+
+---
+class: center, middle
+.center[![flow](./images/datasciFlow.png)]
+
+---
+class: center, middle, inverse
+## Grammar of data manipulation
+
+---
+class: center, middle
+.center[![typeR](./images/typeR.gif)]
+
+---
+## What is R ?
+
+ - `R` est un langage de programmation interpreté
+ - `R` est gratuit et open source
+ - `R` il existe une grande communauté et 12000 packages (add-ons)
+ - `R` excelle dans la manipulation et la visualisation de données
+
+
+---
+## Open an Excel sheet 
+
+```{r}
+library(readxl)
+data <- read_excel(path = "data/data.xlsx", sheet = 1)
+data
+```	
+
+---
+## Grammar of data manipulation and graphics
+
+
+```{r}
+library(dplyr)
+data %>%
+  filter(village == "B") 
+```
+
+---
+## Grammar of data manipulation
+
+```{r}
+data %>%
+  filter(village == "B", taille > 170)
+```
+
+---
+## Grammar of data manipulation
+
+```{r}
+data %>%
+  arrange(poids)
+```
+
+---
+## Grammar of data manipulation
+
+```{r}
+data %>%
+  arrange(desc(poids))
+```
+
+---
+## Grammar of data manipulation
+
+```{r}
+data %>%
+  select(nom, taille)
+```
+---
+## Grammar of data manipulation
+
+```{r}
+data %>%
+  select(nom, taille) %>%
+  arrange(desc(taille))
+```
+
+---
+## Grammar of data manipulation
+
+```{r}
+data %>%
+  mutate(taille_metre = taille / 100, imc = poids / (taille_metre^2)) %>%
+  arrange(desc(imc))
+```
+
+---
+## Grammaire of graphics
+- Grammaire similaire pour faire des graphiques `ggplot2`
+- Manipulation des données spatiales `sf`
+- D'autres aspects (enquêtes complexes, modélisation, etc)
+
+---
+class: center, middle
+.center[![typeR](./images/twitteR.png)]
+
+---
+class: center, middle, inverse
+## Building an open course
+
+
+---
+class: center, middle, inverse
+## Questions?
+
+[dicko5@un.org](mailto:dicko5@un.org)
+
+[dickoa.gitlab.io](http://dickoa.gitlab.io)
+
