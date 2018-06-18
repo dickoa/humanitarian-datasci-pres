@@ -22,10 +22,12 @@ class: center, middle, inverse, title-slide
 
 
 
+---
+class: center, middle, inverse
+## What is humanitarian data science ?
 
 ---
-class: center, middle
-## What is humanitarian data science ?
+## Humanitarian data scientist
 .center[![datasci](./images/datascience.png)]
 
 ---
@@ -37,14 +39,10 @@ class: center, middle, inverse
 .center[![R](./images/reproducibleFlow.png)]
 
 ---
-## Why humanitarian data science
-- Analysis is often error prone and not reproducible (can give an example)
-
+## Analysis is often error prone and not reproducible
 
 ---
-## Why humanitarian data science
-- Humanitarians informations managers come from a wide varied of disciplines and background
-- Most lack knowledge of modern data science tools
+## Lack of modern data science tools in the IMO community
 
 ---
 class: center, middle
@@ -56,7 +54,7 @@ class: center, middle
 
 ---
 class: center, middle, inverse
-## Grammar of data manipulation
+## Grammar of data manipulation and graphics
 
 ---
 class: center, middle
@@ -70,7 +68,7 @@ class: center, middle
 
 
 ---
-## Open an Excel sheet 
+## Grammar of data manipulation and graphics
 
 
 ```r
@@ -96,27 +94,6 @@ data
 ## Grammar of data manipulation and graphics
 
 
-
-```r
-library(dplyr)
-data %&gt;%
-  filter(village == "B") 
-```
-
-```
-## # A tibble: 4 x 4
-##   nom     village taille poids
-##   &lt;chr&gt;   &lt;chr&gt;    &lt;dbl&gt; &lt;dbl&gt;
-## 1 Ali     B          165    50
-## 2 Babacar B          185    80
-## 3 Fatim   B          155    48
-## 4 David   B          175    75
-```
-
----
-## Grammar of data manipulation
-
-
 ```r
 data %&gt;%
   filter(village == "B", taille &gt; 170)
@@ -131,95 +108,7 @@ data %&gt;%
 ```
 
 ---
-## Grammar of data manipulation
-
-
-```r
-data %&gt;%
-  arrange(poids)
-```
-
-```
-## # A tibble: 7 x 4
-##   nom     village taille poids
-##   &lt;chr&gt;   &lt;chr&gt;    &lt;dbl&gt; &lt;dbl&gt;
-## 1 Fatim   B          155    48
-## 2 Ali     B          165    50
-## 3 Marie   A          170    55
-## 4 Aicha   A          180    70
-## 5 David   B          175    75
-## 6 Babacar B          185    80
-## 7 Modou   A          200    90
-```
-
----
-## Grammar of data manipulation
-
-
-```r
-data %&gt;%
-  arrange(desc(poids))
-```
-
-```
-## # A tibble: 7 x 4
-##   nom     village taille poids
-##   &lt;chr&gt;   &lt;chr&gt;    &lt;dbl&gt; &lt;dbl&gt;
-## 1 Modou   A          200    90
-## 2 Babacar B          185    80
-## 3 David   B          175    75
-## 4 Aicha   A          180    70
-## 5 Marie   A          170    55
-## 6 Ali     B          165    50
-## 7 Fatim   B          155    48
-```
-
----
-## Grammar of data manipulation
-
-
-```r
-data %&gt;%
-  select(nom, taille)
-```
-
-```
-## # A tibble: 7 x 2
-##   nom     taille
-##   &lt;chr&gt;    &lt;dbl&gt;
-## 1 Ali        165
-## 2 Marie      170
-## 3 Modou      200
-## 4 Babacar    185
-## 5 Fatim      155
-## 6 David      175
-## 7 Aicha      180
-```
----
-## Grammar of data manipulation
-
-
-```r
-data %&gt;%
-  select(nom, taille) %&gt;%
-  arrange(desc(taille))
-```
-
-```
-## # A tibble: 7 x 2
-##   nom     taille
-##   &lt;chr&gt;    &lt;dbl&gt;
-## 1 Modou      200
-## 2 Babacar    185
-## 3 Aicha      180
-## 4 David      175
-## 5 Marie      170
-## 6 Ali        165
-## 7 Fatim      155
-```
-
----
-## Grammar of data manipulation
+## Grammar of data manipulation and graphics
 
 
 ```r
@@ -243,16 +132,6 @@ data %&gt;%
 ```
 
 ---
-## Grammaire of graphics
-- Grammaire similaire pour faire des graphiques `ggplot2`
-- Manipulation des données spatiales `sf`
-- D'autres aspects (enquêtes complexes, modélisation, etc)
-
----
-class: center, middle
-.center[![typeR](./images/twitteR.png)]
-
----
 class: center, middle, inverse
 ## Building a Massive Open Online Course
 
@@ -263,10 +142,10 @@ class: center, middle, inverse
 ---
 ## Main activities and timeline
 
-- Develop core [curriculum](https://docs.google.com/document/d/1ztVle5UL7TPJXh9v5amzKxRhEutRf4WqhdnCuaR7kwc/edit#)
-- Organize a 1 week “sprint” session inviting core contributors (HDX, WFP, UNHCR, …) to build the skeleton and muscles of the course - **July 2018**
-- Refine content with support from DataCamp and possibly RStudio and test with large pool of IMO
-- Launch content online by end of 2018 advertise to users but also advertise so that content can be expanded/translated
+### Develop core [curriculum](https://docs.google.com/document/d/1ztVle5UL7TPJXh9v5amzKxRhEutRf4WqhdnCuaR7kwc/edit#)
+### Organize a 1 week “sprint” session inviting core contributors (HDX, WFP, UNHCR, …) to build the skeleton and muscles of the course - **July 2018**
+### Refine content with support from DataCamp and possibly RStudio and test with large pool of IMO
+### Launch content online by end of 2018 advertise to users but also advertise so that content can be expanded/translated
 
 
 ---

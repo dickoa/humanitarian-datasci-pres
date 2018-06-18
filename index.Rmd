@@ -33,26 +33,16 @@ class: center, middle, inverse
 .center[![R](./images/reproducibleFlow.png)]
 
 ---
-## Why humanitarian data science
-- Analysis is often error prone and not reproducible (can give an example)
-
-
----
-## Why humanitarian data science
-- Humanitarians informations managers come from a wide varied of disciplines and background
-- Most lack knowledge of modern data science tools
-
----
-class: center, middle
+## Analysis is often error prone and not reproducible
 .center[![flow](./images/RFlow.png)]
 
 ---
-class: center, middle
+## Lack of modern data science tools in the IMO community
 .center[![flow](./images/datasciFlow.png)]
 
 ---
 class: center, middle, inverse
-## Grammar of data manipulation
+## Grammar of data manipulation and graphics
 
 ---
 class: center, middle
@@ -66,7 +56,7 @@ class: center, middle
 
 
 ---
-## Open an Excel sheet 
+## Grammar of data manipulation and graphics
 
 ```{r}
 library(readxl)
@@ -74,58 +64,9 @@ data <- read_excel(path = "data/data.xlsx", sheet = 1)
 data
 ```	
 
+
 ---
 ## Grammar of data manipulation and graphics
-
-
-```{r}
-library(dplyr)
-data %>%
-  filter(village == "B") 
-```
-
----
-## Grammar of data manipulation
-
-```{r}
-data %>%
-  filter(village == "B", taille > 170)
-```
-
----
-## Grammar of data manipulation
-
-```{r}
-data %>%
-  arrange(poids)
-```
-
----
-## Grammar of data manipulation
-
-```{r}
-data %>%
-  arrange(desc(poids))
-```
-
----
-## Grammar of data manipulation
-
-```{r}
-data %>%
-  select(nom, taille)
-```
----
-## Grammar of data manipulation
-
-```{r}
-data %>%
-  select(nom, taille) %>%
-  arrange(desc(taille))
-```
-
----
-## Grammar of data manipulation
 
 ```{r}
 data %>%
@@ -133,16 +74,6 @@ data %>%
          imc = poids / (taille_metre^2)) %>%
   arrange(desc(imc))
 ```
-
----
-## Grammaire of graphics
-- Grammaire similaire pour faire des graphiques `ggplot2`
-- Manipulation des données spatiales `sf`
-- D'autres aspects (enquêtes complexes, modélisation, etc)
-
----
-class: center, middle
-.center[![typeR](./images/twitteR.png)]
 
 ---
 class: center, middle, inverse
@@ -155,10 +86,10 @@ class: center, middle, inverse
 ---
 ## Main activities and timeline
 
-- Develop core [curriculum](https://docs.google.com/document/d/1ztVle5UL7TPJXh9v5amzKxRhEutRf4WqhdnCuaR7kwc/edit#)
-- Organize a 1 week “sprint” session inviting core contributors (HDX, WFP, UNHCR, …) to build the skeleton and muscles of the course - **July 2018**
-- Refine content with support from DataCamp and possibly RStudio and test with large pool of IMO
-- Launch content online by end of 2018 advertise to users but also advertise so that content can be expanded/translated
+### Develop core [curriculum](https://docs.google.com/document/d/1ztVle5UL7TPJXh9v5amzKxRhEutRf4WqhdnCuaR7kwc/edit#)
+### Organize a 1 week “sprint” session inviting core contributors (HDX, WFP, UNHCR) to build the skeleton and muscles of the core content.
+### Refine content with support from DataCamp and possibly RStudio and test with large pool of IMO.
+### Launch content online by end of 2018 advertise to users but also advertise so that content can be expanded/translated.
 
 
 ---
