@@ -16,6 +16,16 @@ output:
 knitr::opts_chunk$set(warning = FALSE, message = FALSE, fig.width = 12, fig.height = 4)
 ```
 
+
+---
+class: center, middle, inverse
+## What is humanitarian data science ?
+.center[![datasci](./images/datascience.png)]
+
+---
+## Humanitarian data scientist
+.center[![datasci](./images/datascience.png)]
+
 ---
 class: center, middle, inverse
 ## Why humanitarian data science ?
