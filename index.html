@@ -27,6 +27,10 @@ class: center, middle, inverse
 ## What is humanitarian data science ?
 
 ---
+## Data science
+.center[![flow](./images/datasciFlow.png)]
+
+---
 ## Humanitarian data scientist
 .center[![datasci](./images/datascience.png)]
 
@@ -45,20 +49,12 @@ class: center, middle, inverse
 ## Lack of modern data science tools in the IMO community
 
 ---
-class: center, middle
-.center[![flow](./images/RFlow.png)]
-
----
-class: center, middle
-.center[![flow](./images/datasciFlow.png)]
-
----
 class: center, middle, inverse
 ## Grammar of data manipulation and graphics
 
 ---
-class: center, middle
-.center[![typeR](./images/typeR.gif)]
+## Grammar of data manipulation and graphics with R
+.center[![flow](./images/RFlow.png)]
 
 ---
 ## Why R ?
@@ -72,6 +68,7 @@ class: center, middle
 
 
 ```r
+library(dplyr)
 library(readxl)
 data &lt;- read_excel(path = "data/data.xlsx", sheet = 1)
 data
@@ -90,22 +87,6 @@ data
 ## 7 Aicha   A          180    70
 ```
 
----
-## Grammar of data manipulation and graphics
-
-
-```r
-data %&gt;%
-  filter(village == "B", taille &gt; 170)
-```
-
-```
-## # A tibble: 2 x 4
-##   nom     village taille poids
-##   &lt;chr&gt;   &lt;chr&gt;    &lt;dbl&gt; &lt;dbl&gt;
-## 1 Babacar B          185    80
-## 2 David   B          175    75
-```
 
 ---
 ## Grammar of data manipulation and graphics
@@ -143,9 +124,9 @@ class: center, middle, inverse
 ## Main activities and timeline
 
 ### Develop core [curriculum](https://docs.google.com/document/d/1ztVle5UL7TPJXh9v5amzKxRhEutRf4WqhdnCuaR7kwc/edit#)
-### Organize a 1 week “sprint” session inviting core contributors (HDX, WFP, UNHCR, …) to build the skeleton and muscles of the course - **July 2018**
-### Refine content with support from DataCamp and possibly RStudio and test with large pool of IMO
-### Launch content online by end of 2018 advertise to users but also advertise so that content can be expanded/translated
+### Organize a 1 week “sprint” session inviting core contributors (HDX, WFP, UNHCR) to build the skeleton and muscles of the core content.
+### Refine content with support from DataCamp and possibly RStudio and test with large pool of IMO.
+### Launch content online by end of 2018 advertise to users but also advertise so that content can be expanded/translated.
 
 
 ---

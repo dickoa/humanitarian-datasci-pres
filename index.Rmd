@@ -21,6 +21,10 @@ class: center, middle, inverse
 ## What is humanitarian data science ?
 
 ---
+## Data science
+.center[![flow](./images/datasciFlow.png)]
+
+---
 ## Humanitarian data scientist
 .center[![datasci](./images/datascience.png)]
 
@@ -34,19 +38,17 @@ class: center, middle, inverse
 
 ---
 ## Analysis is often error prone and not reproducible
-.center[![flow](./images/RFlow.png)]
 
 ---
 ## Lack of modern data science tools in the IMO community
-.center[![flow](./images/datasciFlow.png)]
 
 ---
 class: center, middle, inverse
 ## Grammar of data manipulation and graphics
 
 ---
-class: center, middle
-.center[![typeR](./images/typeR.gif)]
+## Grammar of data manipulation and graphics with R
+.center[![flow](./images/RFlow.png)]
 
 ---
 ## Why R ?
@@ -59,6 +61,7 @@ class: center, middle
 ## Grammar of data manipulation and graphics
 
 ```{r}
+library(dplyr)
 library(readxl)
 data <- read_excel(path = "data/data.xlsx", sheet = 1)
 data
