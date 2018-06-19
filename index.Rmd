@@ -39,8 +39,6 @@ class: center, middle, inverse
 ---
 ## Analysis is often error prone and not reproducible
 
----
-## Lack of modern data science tools in the IMO community
 
 ---
 class: center, middle, inverse
