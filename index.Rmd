@@ -89,10 +89,10 @@ class: center, middle, inverse
 ---
 ## Main activities and timeline
 
-### Develop core [curriculum](https://docs.google.com/document/d/1ztVle5UL7TPJXh9v5amzKxRhEutRf4WqhdnCuaR7kwc/edit#)
-### Organize a 1 week “sprint” session inviting core contributors (HDX, WFP, UNHCR) to build the skeleton and muscles of the core content.
-### Refine content with support from DataCamp and possibly RStudio and test with large pool of IMO.
-### Launch content online by end of 2018 advertise to users but also advertise so that content can be expanded/translated.
+#### Develop core [curriculum](https://docs.google.com/document/d/1ztVle5UL7TPJXh9v5amzKxRhEutRf4WqhdnCuaR7kwc/edit#)
+#### Organize a 1 week "sprint" session inviting core contributors (HDX, WFP, UNHCR) to build the skeleton and muscles of the course.
+#### Refine content with support from DataCamp and possibly RStudio and test with large pool of IMO.
+#### Launch content online by end of 2018 advertise to users but also advertise so that content can be expanded/translated.
 
 
 ---
